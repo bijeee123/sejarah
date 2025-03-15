@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+  }
+  
+  .header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 2s ease-in-out;
+  }
+  
+  .header-content p {
+    font-size: 1.8rem;
+    animation: fadeInUp 2.5s ease-in-out;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Intro Section */
+  .intro {
+    padding: 100px 20px;
+    text-align: center;
+    background: white;
+  }
+  
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2575fc;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .sejarah-container {
+    position: relative;
+    background: #aa00ff;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    padding: 14px 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.62),
+      inset 0px -2px 3px rgba(0, 0, 0, 0.48), inset 1px 1px 4px #ffffff,
+      rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #ffff;
+  }
+  
+  .sejarah-1,
+  .sejarah-2,
+  .sejarah-3 {
+    position: absolute;
+    transform: translateX(-50%);
+    font-weight: 800;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+    border-radius: 8px 8px 8px 8px;
+    background: #007bff;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.62),
+      inset 0px -2px 3px rgba(0, 0, 0, 0.48), inset 1px 1px 4px #ffffff,
+      rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    min-width: 180px;
+    padding: 8px;
+    color: #ffff;
+    font-size: 11px;
+  }
+  .sejarah-1 { 
+    top: 0%;
+    left: 50%;
+    
+  }
+  .sejarah-2 {
+    left: 100%;
+  }
+  
+  .sejarah-3 {
+    left: 100%;
+  }
+  .sejarah-container:hover .sejarah-1 {
+    top: -100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .sejarah-container:hover .sejarah-2 {
+    left: -92%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .sejarah-container:hover .sejarah-3 {
+    left: 145%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }  
+  
+  /* Timeline Section */
+  .timeline {
+    padding: 100px 20px;
+    background: #f4f4f9;
+  }
+  
+  .timeline h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2575fc;
+  }
+  
+  .timeline-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    background: white;
+    padding: 30px;
+    margin: 100px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timeline-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #6a11cb;
+  }
+  
+  .timeline-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Impact Section */
+  .impact {
+    padding: 100px 20px;
+    background: white;
+  }
+  
+  .impact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2575fc;
+  }
+  
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .impact-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .impact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .impact-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #6a11cb;
+  }
+  
+  .impact-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-content h1 {
+      font-size: 3rem;
+    }
+  
+    .header-content p {
+      font-size: 1.2rem;
+    }
+  
+    .timeline-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .timeline-item {
+      width: 80%;
+    }
+  }
